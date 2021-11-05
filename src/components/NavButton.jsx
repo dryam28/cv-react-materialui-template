@@ -48,27 +48,30 @@ const NavButton = () => {
 
   const list = () => (
     <List style={{ marginTop: "20px" }}>
-      {sections.map((item) => (
-        <ListItem disablePadding>
-          <ListItemButton style={{ padding: "2px 0" }}>
-            <Box
-              mx={3}
-              mr={10}
-              py={0.8}
-              display="flex"
-              alignItems="center"
-              style={{ fontSize: "0.8rem" }}
+      {sections.map((item, key) => (
+        <ListItem disablePadding key={key}>
+          <ListItemButton style={{ padding: "2px 0" }} href="google.com">
+            <a
+              href={`#${item.title.toLowerCase()}`}
+              style={{ textDecoration: "none", color: "#757373" }}
+              onClick={toggleDrawer(false)}
             >
               <Box
+                mx={3}
+                mr={10}
+                py={0.8}
                 display="flex"
-                flexGrow="1"
-                pr={1}
-                style={{ color: "#8b8a8a" }}
+                alignItems="center"
+                style={{ fontSize: "0.8rem" }}
               >
-                {item.icon}
+                <Box display="flex" flexGrow="1" pr={1}>
+                  {item.icon}
+                </Box>
+                <Box flexGrow="10">
+                  {item.title.toUpperCase()}
+                </Box>
               </Box>
-              <Box flexGrow="10">{item.title.toUpperCase()}</Box>
-            </Box>
+            </a>
           </ListItemButton>
         </ListItem>
       ))}
@@ -89,7 +92,7 @@ const NavButton = () => {
           background: "none",
           borderRadius: "10px",
           color: "#4195e4",
-          zIndex: 1000
+          zIndex: 1000,
         }}
       >
         <MenuRoundedIcon />

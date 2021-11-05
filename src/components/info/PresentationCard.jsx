@@ -1,4 +1,4 @@
-import "../styles/card.css";
+import "../../styles/card.css";
 import {
   Box,
   List,
@@ -22,11 +22,12 @@ const PresentationCard = () => {
 
   return (
     <Grid
+      id="home"
       container
       justifyContent="center"
-      style={{ position: "relative", top: "-5cm" }}
+      style={{ position: "absolute", top: "-5cm" }}
     >
-      <Grid item xs={12} sm={10} md={5}>
+      <Grid item xs={11} sm={10} md={4}>
 
 
         {media ? (
@@ -44,7 +45,7 @@ const PresentationCard = () => {
               textShadow: "5px 5px 10px rgba(0,0,0,0.3)",
             }}
           >
-            Donald Trump
+            Lorem Ipsun
           </Typography>
           <Typography
             align="left"
@@ -58,8 +59,8 @@ const PresentationCard = () => {
           </Typography>
 
           <List style={{ marginTop: "2rem" }}>
-            {info.map((item) => (
-              <ListItem style={{ padding: 0 }}>
+            {info.map((item, key) => (
+              <ListItem key={key} style={{ padding: 0 }}>
                 <Box display="flex" alignItems="center" my={0.4}>
                   {item.icon}
                   <span style={{ paddingLeft: ".5rem" }}>{item.info}</span>
@@ -68,13 +69,12 @@ const PresentationCard = () => {
             ))}
           </List>
 
-          {/* Diagonal de al lado */}
           <Box className="slant">{""}</Box>
         </Box>
       </Grid>
       {!media ? (
         <Grid item sm={5} md={4}>
-          <Box bgcolor="blue" height="100%" id="userPicture"></Box>
+          <Box bgcolor="primary" height="100%" id="userPicture"></Box>
         </Grid>
       ) : null}
     </Grid>

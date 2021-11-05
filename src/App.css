@@ -2,12 +2,7 @@
   text-align: center;
   background-color: rgb(243, 242, 242);
   margin-top: 350px;
+  padding-top: 220px;
   height: 100vh;
-}
-
-@media screen and (max-width:768px) {
-  .App {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+  position: relative;
 }
