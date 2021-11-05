@@ -1,0 +1,33 @@
+.slant {
+  height: 100%;
+  width: 3.5cm;
+  position: absolute;
+  right: -3.5cm;
+  top: 0%;
+  background: linear-gradient(
+    71deg,
+    #0ba85a 0%,
+    #0ba85a 50%,
+    #acd7c100 50%,
+    #acbbd700 100%
+  );
+}
+
+#userPicture {
+  background-image: url(../images/user.jpg);
+  background-size: cover;
+}
+
+@media screen and (max-width: 899px) {
+  #userPicture {
+    border-radius: 100%;
+    height: 140px;
+    width: 140px;
+    position: absolute;
+     z-index: 10;
+     top: -1.5cm;
+  }
+  .slant {
+    display: none;
+  }
+}
