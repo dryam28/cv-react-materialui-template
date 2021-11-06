@@ -1,6 +1,6 @@
 import './App.css';
 import NavButton from './components/NavButton';
-import PresentationCard from './components/info/PresentationCard';
+import Info from './components/Info';
 import ButtonUpHome from './components/ButtonUpHome';
 
 function App() {
@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="App">
       <NavButton/>
-      <PresentationCard/>
       <ButtonUpHome/>
+      <Info/>
     </div>
   );
 }

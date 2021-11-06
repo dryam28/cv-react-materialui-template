@@ -6,11 +6,13 @@
   top: 0%;
   background: linear-gradient(
     78deg,
-    #0ba85a 0%,
-    #0ba85a 50%,
-    #acd7c100 50%,
+    #283593 0%,
+    #283593 50%,
+    #0fbb6500 51%,
     #acbbd700 100%
   );
+  /* backdrop-filter: blur(10px) opacity(100%);
+    -webkit-backdrop-filter: blur(10px); */
 }
 
 #userPicture {

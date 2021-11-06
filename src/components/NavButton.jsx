@@ -85,13 +85,13 @@ const NavButton = () => {
         onClick={toggleDrawer(true)}
         aria-label="add"
         size="small"
-        style={{
+        sx={{
           position: "fixed",
           left: "10px",
           top: "10px",
           background: "none",
           borderRadius: "10px",
-          color: "#4195e4",
+          color: "primary.main",
           zIndex: 1000,
         }}
       >
@@ -99,7 +99,7 @@ const NavButton = () => {
       </Fab>
       <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
         <Box
-          bgcolor="#4195e4"
+          sx={{ backgroundColor:'primary.main'}}
           color="#fff"
           py={1}
           display="flex"

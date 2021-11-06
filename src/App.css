@@ -2,7 +2,28 @@
   text-align: center;
   background-color: rgb(243, 242, 242);
   margin-top: 350px;
-  padding-top: 220px;
+  padding-top: 230px;
   height: 100vh;
   position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+  .App{
+    padding-top: 260px;
+  }
+}
+@media screen and (max-width: 985px) {
+  .App{
+    padding-top: 350px;
+  }
+}
+@media screen and (max-width: 899px) {
+  .App{
+    padding-top: 250px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .App{
+    padding-top: 280px;
+  }
 }
