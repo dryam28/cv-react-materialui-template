@@ -5,7 +5,7 @@ import SchoolIcon from "@mui/icons-material/School";
 export default function EducationTimeLine() {
   return (
     <div id="education">
-      <div class="container">
+      <div className="container">
         <Box display="flex" justifyContent="center" alignItems="center" mb={5}>
           <Box
             borderRadius="10px"
@@ -23,13 +23,13 @@ export default function EducationTimeLine() {
         </Box>
         <div className="timeline">
           {info.map((item, key) => (
-            <div class="timeline-container primary" key={key}>
+            <div className="timeline-container primary" key={key}>
               <div className="timeline-icon">
                 <i className="far fa-grin-wink">{item.gradeType[0]}</i>
               </div>
               <div className="timeline-body">
                 <Box>
-                  <h4 class="timeline-title">
+                  <h4 className="timeline-title">
                     {item.gradeType}
                     <span className="schoolName">
                       {" - " + item.schoolName}

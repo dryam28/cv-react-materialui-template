@@ -97,7 +97,7 @@ const PresentationCard = () => {
 
           <Grid container spacing={3} justifyContent="center">
             {socialNetworks.map((item, key) => (
-              <Grid item>
+              <Grid item key={key}>
                 <IconButton
                   size="large"
                   sx={{

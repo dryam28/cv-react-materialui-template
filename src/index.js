@@ -1,22 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import {createTheme, ThemeProvider} from '@mui/material/styles'
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme({
-  palette:{
-    secondary:{
-      main:'#283593'
-    }
-  }
-})
+  palette: {
+    secondary: {
+      main: "#283593",
+    },
+  },
+});
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <App />
   </ThemeProvider>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
