@@ -42,7 +42,7 @@ const theme = createTheme({
 const Skills = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Box mt={4}>
+      <Box mt={4} id='skills'>
         <Box mb={3}>
           <Typography
             fontWeight="bold"
@@ -61,7 +61,7 @@ const Skills = () => {
             lg={8}
             sx={{ backgroundColor: "secondary.main", color: "white" }}
           >
-            <Box py={5} px={3} boxShadow={"0px 8px 10px rgba(0,0,0,0.4)"}>
+            <Box py={5} pt={8} px={3} boxShadow={"0px 8px 10px rgba(0,0,0,0.4)"}>
               <Grid container spacing={5}>
                 {/* Esto es para generar las columnas con la info */}
                 {skills.map((item, key) => (

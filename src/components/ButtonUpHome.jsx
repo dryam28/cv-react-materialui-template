@@ -1,11 +1,18 @@
 import { Fab } from "@mui/material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import { Link } from "react-scroll";
 
 const ButtonUpHome = () => {
   return (
-    <div style={{ background: "red" }}>
+    <Link
+      activeClass="active"
+      to="home"
+      spy={true}
+      smooth={true}
+      offset={-70}
+      duration={400}
+    >
       <Fab
-        href="#home"
         color="primary"
         aria-label="add"
         size="small"
@@ -19,7 +26,7 @@ const ButtonUpHome = () => {
       >
         <KeyboardArrowUpIcon fontSize="large" />
       </Fab>
-    </div>
+    </Link>
   );
 };
 

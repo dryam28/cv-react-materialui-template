@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-#education {
+.education {
   letter-spacing: 1px;
   background: #1e1e2f;
   padding-top: 20px;

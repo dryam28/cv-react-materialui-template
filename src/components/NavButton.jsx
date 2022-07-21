@@ -8,6 +8,9 @@ import {
   Fab,
 } from "@mui/material/";
 
+import { AlignHorizontalRight } from "@mui/icons-material";
+import { Link } from "react-scroll";
+
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import InfoRoundedIcon from "@mui/icons-material/InfoRounded";
@@ -26,6 +29,7 @@ const NavButton = () => {
     { title: "Home", icon: <HomeRoundedIcon fontSize="small" /> },
     { title: "About", icon: <InfoRoundedIcon fontSize="small" /> },
     { title: "Education", icon: <SchoolRoundedIcon fontSize="small" /> },
+    { title: "Skills", icon: <AlignHorizontalRight fontSize="small" /> },
     { title: "Experience", icon: <WorkRoundedIcon fontSize="small" /> },
     { title: "Portfolios", icon: <InboxRoundedIcon fontSize="small" /> },
     { title: "Interest", icon: <FavoriteRoundedIcon fontSize="small" /> },
@@ -51,8 +55,13 @@ const NavButton = () => {
       {sections.map((item, key) => (
         <ListItem disablePadding key={key}>
           <ListItemButton style={{ padding: "2px 0" }} href="google.com">
-            <a
-              href={`#${item.title.toLowerCase()}`}
+            <Link
+              activeClass="active"
+              to={`${item.title.toLowerCase()}`}
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={4500}
               style={{ textDecoration: "none", color: "#757373" }}
               onClick={toggleDrawer(false)}
             >
@@ -67,11 +76,9 @@ const NavButton = () => {
                 <Box display="flex" flexGrow="1" pr={1}>
                   {item.icon}
                 </Box>
-                <Box flexGrow="10">
-                  {item.title.toUpperCase()}
-                </Box>
+                <Box flexGrow="10">{item.title.toUpperCase()}</Box>
               </Box>
-            </a>
+            </Link>
           </ListItemButton>
         </ListItem>
       ))}
@@ -99,7 +106,7 @@ const NavButton = () => {
       </Fab>
       <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
         <Box
-          sx={{ backgroundColor:'primary.main'}}
+          sx={{ backgroundColor: "primary.main" }}
           color="#fff"
           py={1}
           display="flex"
